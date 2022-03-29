@@ -1,0 +1,349 @@
+/************************************************************************************ 
+                                 Normalize CSS
+************************************************************************************/
+
+
+:root{
+    --color-primary:#12293b;
+    --color-white:#fff;
+    --color-black:#000;
+    --colo-warning:#FCD02C;
+    --color-info:#3AEDFF;
+    --color-danger:#f83037;
+
+}
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth; 
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-primary{
+    color: var(--color-primary);
+}
+.text-white{
+    color: var(--color-white);
+}
+.text-black{
+    color: var(--color-black);
+}
+.container-padding{
+padding: 15px 100px;
+}
+.section-title{
+    font-weight: bold;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 3rem;
+}
+a {
+    text-decoration: none;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+ul{
+list-style: none;
+
+}
+li{
+   
+}
+
+.btn {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.btn-outline{
+    background: inherit !important;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    transition: 0.5s all;
+}
+.btn-outline:hover{
+    background-color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary);
+    color: var(--color-white);
+}
+
+/************************************************************************************ 
+                                 Navbar CSS 
+************************************************************************************/
+
+
+.navbar {
+    background-color: #0E263D;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+
+}
+.navbar .nav-inner{
+    height: 60px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.navbar-left {}
+
+
+
+.navbar-right ul li {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.navbar-right ul li a.active {
+    border-bottom: 2px solid red;
+}
+
+.navbar-left .nav-logo {
+    width: 100px;
+}
+
+.btn-portfolios {
+    position: relative;
+}
+
+.btn-portfolios .count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -4px;
+    top: -5px;
+    padding: 2px;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+/************************************************************************************ 
+                                 Header/Banner CSS 
+************************************************************************************/
+
+.header-banner {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-banner .profile-img{
+    width: 100%;
+   
+}
+.header-text {
+    bottom: 40px;
+    text-align: center;
+    color: #fff;
+    left: 20%;
+    right: 20%;
+
+}
+
+.header-text h2 {
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1.2em;
+}
+
+.header-social a {
+    margin-right: 5px;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.header-social a.facebook {
+    background-color: #0c86ee;
+}
+
+.header-social a.twiter {
+    background-color: #00B6F1;
+}
+ 
+.header-social a.youtube {
+    background-color: #ff0000;
+}
+
+.header-profile img{
+    min-width: 400px;
+    max-width: 100%;
+    
+}
+
+
+
+
+/************************************************************************************ 
+                                Portfolio CSS
+************************************************************************************/
+
+.portfolios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+
+.portfolio {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+    transition: 0.4s all;
+}
+.portfolio:hover{
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+    }
+    
+.portfolio img{
+    width: 100%;
+    height: 230px;
+}
+
+/************************************************************************************ 
+                                badge CSS
+************************************************************************************/
+.badge{
+    background-color:var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--color-white);
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+.badge-info{
+    background-color: var(--color-info);
+}
+.badge-warning{
+    background-color: var(--colo-warning);
+}
+.badge-danger{
+    background-color: var(--color-danger);
+}
+/************************************************************************************ 
+                                Content CSS
+************************************************************************************/
+#contact-me{
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3rem;
+}
+.contact-box{
+    display: flex;
+}
+.contact-box > *:nth-child(1){
+    flex-basis: 60%;
+    margin: 0 auto;
+    padding: 40px 100px;
+  
+}
+.contact-box > *:nth-child(2){
+    flex-basis: 40%;
+    margin: 0 auto;
+    
+  
+}
+.contact-box .form-group{
+    margin-bottom: 20px;
+}
+.input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--color-white);
+    border: 1px solid #ffff;
+    transition: 0.6s all;
+}
+.input:hover, .input:focus{
+    border: 1px solid var(--color-primary);
+    outline: none;
+}
+
+/************************************************************************************ 
+                                footer CSS
+************************************************************************************/
+.footer{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 80px;
+}
+
+.footer a{
+    color: #f1cbcb
+}
+.footer .footer-top{
+    display: flex;
+    flex-wrap:wrap ;
+}
+.footer-top > div {
+    flex: 0 0 33.3%;
+}
+.footer-copyright{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+.text-right .back-to-top {
+    background-color: antiquewhite;
+    color: black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.3s all;
+}
+
+.text-right i{
+    font-size: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.text-right .back-to-top:hover{
+    background-color: #000;
+}
+.text-right .back-to-top i{
+    color: var(--color-primary);
+}
